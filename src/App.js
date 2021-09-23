@@ -22,6 +22,8 @@ const App = () => {
         <Auto kilometro={20} />
         <Moto kilometro={5} />
 
+        <br />
+
         <Kilometro />
       </KmsProvider>
 
