@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+// import { useState } from "react";
+import { Auto } from "./components/Auto";
+import { Kilometro } from "./components/Kilometro";
+import { Moto } from "./components/Moto";
+import { KmsProvider } from "./context/KilometroContext";
+
+const App = () => {
+
+  // const [kms, setKms] = useState(0);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <KmsProvider>
+        <Auto kilometro={20} kms={kms} setKms={setKms} />
+        <Moto kilometro={5} kms={kms} setKms={setKms} />
+
+        <Kilometro kms={kms} />
+      </KmsProvider> */}
+
+      <KmsProvider>
+        <Auto kilometro={20} />
+        <Moto kilometro={5} />
+
+        <Kilometro />
+      </KmsProvider>
+
+    </>
   );
 }
 
